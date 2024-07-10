@@ -1,7 +1,8 @@
-// src/screens/Home/home.tsx
+// src/screens/Home/homescreen.tsx
 
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text} from 'react-native';
+import styles from '../../styles/Home/homescreenStyles';
 
 const Home = () => {
   return (
@@ -10,16 +11,5 @@ const Home = () => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  text: {
-    fontSize: 20,
-  },
-});
 
 export default Home;

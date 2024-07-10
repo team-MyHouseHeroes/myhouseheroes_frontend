@@ -39,8 +39,14 @@ const BottomTabNavigator = () => {
             />
           );
         },
-        tabBarActiveTintColor: 'black',
+        tabBarActiveTintColor: '#FE4F18',
         tabBarInactiveTintColor: 'gray',
+        headerTitle: '우리집 히어로즈',
+        headerTitleAlign: 'center',
+        headerTitleStyle: {
+          color: 'black',
+          fontSize: 20,
+        },
       })}>
       <Tab.Screen name="Home" component={Home} />
       <Tab.Screen name="Write" component={Write} />
