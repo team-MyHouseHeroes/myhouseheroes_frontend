@@ -46,6 +46,7 @@ const BottomTabNavigator = () => {
         headerTitleStyle: {
           color: 'black',
           fontSize: 20,
+          fontWeight: 'bold',
         },
       })}>
       <Tab.Screen name="Home" component={Home} />
