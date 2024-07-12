@@ -4,7 +4,8 @@ import React from 'react';
 import {Image} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Home from '../screens/Home/homescreen';
-import Alarm from '../screens/Alarm/alarmscreen';
+import Alarm_Host from '../screens/Alarm/AlarmHostScreen';
+import Alarm_Hero from '../screens/Alarm/AlarmHeroScreen';
 import My from '../screens/MY/myscreen';
 import Write from '../screens/Write/writescreen';
 
@@ -51,7 +52,7 @@ const BottomTabNavigator = () => {
       })}>
       <Tab.Screen name="Home" component={Home} />
       <Tab.Screen name="Write" component={Write} />
-      <Tab.Screen name="Alarm" component={Alarm} />
+      <Tab.Screen name="Alarm" component={Alarm_Host} />
       <Tab.Screen name="My" component={My} />
     </Tab.Navigator>
   );
