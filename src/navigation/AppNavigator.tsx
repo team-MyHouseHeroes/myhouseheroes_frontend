@@ -6,7 +6,8 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import BottomTabNavigator from './BottomTabNavigator';
 
 import Home from '../screens/Home/homescreen';
-import Alarm from '../screens/Alarm/alarmscreen';
+import Alarm_Host from '../screens/Alarm/AlarmHostScreen';
+import Alarm_Hero from '../screens/Alarm/AlarmHeroScreen';
 import My from '../screens/MY/myscreen';
 import Write from '../screens/Write/writescreen';
 
@@ -22,7 +23,7 @@ const AppNavigator = () => {
           options={{headerShown: false}}
         />
         <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Alarm" component={Alarm} />
+        <Stack.Screen name="Alarm" component={Alarm_Host} />
         <Stack.Screen name="My" component={My} />
         <Stack.Screen name="Write" component={Write} />
       </Stack.Navigator>
