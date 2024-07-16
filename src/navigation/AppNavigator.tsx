@@ -23,7 +23,7 @@ const AppNavigator = () => {
           options={{headerShown: false}}
         />
         <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Alarm" component={Alarm_Host} />
+        <Stack.Screen name="Alarm" component={Alarm_Hero} />
         <Stack.Screen name="My" component={My} />
         <Stack.Screen name="Write" component={Write} />
       </Stack.Navigator>
