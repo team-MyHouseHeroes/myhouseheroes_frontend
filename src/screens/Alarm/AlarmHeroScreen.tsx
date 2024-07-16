@@ -1,4 +1,4 @@
-// src/screens/Alarm/AlarmHeroScreen.tsx
+// src/screens/Alarm/AlarmHeroScreen
 
 import React from 'react';
 import {View, Text} from 'react-native';
