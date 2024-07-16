@@ -1,5 +1,3 @@
-// src/styles/Home/homescreenStyles.ts
-
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
@@ -16,7 +14,6 @@ const styles = StyleSheet.create({
   filterButton: {
     flexDirection: 'row',
     padding: 8,
-    color: '#FFFFFF',
     borderRadius: 4,
     alignItems: 'center',
   },
@@ -71,21 +68,69 @@ const styles = StyleSheet.create({
     width: 16,
     height: 16,
   },
-  centeredView: {
+  // PostFilterModal styles
+  centeredViewFilterModal: {
+    flex: 1,
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+  },
+  modalViewFilterModal: {
+    backgroundColor: 'white',
+    borderRadius: 8,
+    padding: 16,
+    elevation: 5,
+    marginRight: '63%',
+    marginTop: '30%',
+  },
+  buttonContainer: {
+    backgroundColor: '#FE4F18',
+    paddingVertical: 4,
+    paddingHorizontal: 16,
+    borderRadius: 5,
+    width: 100,
+    height: 25,
+    justifyContent: 'center',
+    marginTop: 4,
+  },
+  buttonText: {
+    color: '#FFFFFF',
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+  // PostSortModal styles
+  centeredViewSortModal: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'rgba(0, 0, 0, 0.5)', // 반투명 배경
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
   },
-  modalView: {
+  modalViewSortModal: {
     backgroundColor: 'white',
     borderRadius: 8,
     padding: 16,
     alignItems: 'center',
-    elevation: 5, // 그림자
+    elevation: 5,
+    marginLeft: '70%',
+    marginBottom: '80%',
   },
+  // Common modal button styles
   modalButton: {
-    marginBottom: 12, // 각 버튼 사이의 간격 조정
+    marginBottom: 12,
+    width: '100%',
+    padding: 10,
+    alignItems: 'center',
+    borderRadius: 4,
+  },
+  modalButtonText: {
+    fontSize: 14,
+    color: '#000000',
+  },
+  selectedText: {
+    color: '#000000',
+  },
+  grayText: {
+    color: '#CCCCCC',
   },
 });
 

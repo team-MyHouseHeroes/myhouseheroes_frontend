@@ -1,4 +1,4 @@
-// src/screens/Alarm/AlarmHostScreen.tsx
+// src/screens/Alarm/AlarmHostScreen
 
 import React, {useState} from 'react';
 import {View, Text, FlatList, Image, TouchableOpacity} from 'react-native';

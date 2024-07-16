@@ -1,4 +1,4 @@
-// src/screens/Home/homescreen.tsx
+// src/screens/Home/HomeScreen.tsx
 
 import React, {useState} from 'react';
 import {
@@ -8,10 +8,11 @@ import {
   Image,
   TouchableOpacity,
   Modal,
-  Pressable,
 } from 'react-native';
-import styles from '../../styles/Home/homescreenStyles';
+import styles from '../../styles/Home/HomeScreenStyles';
 import StatusButton from '../../components/Home/StatusButton';
+import PostFilterModal from '../../components/Home/PostFilterModal';
+import PostSortModal from '../../components/Home/PostSortModal';
 
 const downIcon = require('../../img/downIcon.png');
 
@@ -105,81 +106,25 @@ const Home = () => {
         </TouchableOpacity>
       </View>
 
-      {/* 필터 모달 */}
-      <Modal
-        animationType="slide"
-        transparent={true}
+      <PostFilterModal
         visible={filterModalVisible}
-        onRequestClose={() => {
-          setFilterModalVisible(!filterModalVisible);
-        }}>
-        <View style={styles.centeredView}>
-          <View style={styles.modalView}>
-            <Pressable
-              style={[styles.filterButton, styles.modalButton]}
-              onPress={() => {
-                setSelectedFilter('전체');
-                setFilterModalVisible(!filterModalVisible);
-              }}>
-              <Text style={styles.filterButtonText}>전체</Text>
-            </Pressable>
-            <Pressable
-              style={[styles.filterButton, styles.modalButton]}
-              onPress={() => {
-                setSelectedFilter('호스트 요청');
-                setFilterModalVisible(!filterModalVisible);
-              }}>
-              <Text style={styles.filterButtonText}>호스트 요청</Text>
-            </Pressable>
-            <Pressable
-              style={[styles.filterButton, styles.modalButton]}
-              onPress={() => {
-                setSelectedFilter('히어로 홍보');
-                setFilterModalVisible(!filterModalVisible);
-              }}>
-              <Text style={styles.filterButtonText}>히어로 홍보</Text>
-            </Pressable>
-          </View>
-        </View>
-      </Modal>
+        onClose={() => setFilterModalVisible(false)}
+        onSelectFilter={filter => {
+          setSelectedFilter(filter);
+          setFilterModalVisible(false);
+        }}
+        selectedFilter={selectedFilter}
+      />
 
-      {/* 정렬 모달 */}
-      <Modal
-        animationType="slide"
-        transparent={true}
+      <PostSortModal
         visible={sortModalVisible}
-        onRequestClose={() => {
-          setSortModalVisible(!sortModalVisible);
-        }}>
-        <View style={styles.centeredView}>
-          <View style={styles.modalView}>
-            <Pressable
-              style={[styles.filterButton, styles.modalButton]}
-              onPress={() => {
-                setSelectedSort('최신순');
-                setSortModalVisible(!sortModalVisible);
-              }}>
-              <Text style={styles.filterButtonText}>최신순</Text>
-            </Pressable>
-            <Pressable
-              style={[styles.filterButton, styles.modalButton]}
-              onPress={() => {
-                setSelectedSort('등급순');
-                setSortModalVisible(!sortModalVisible);
-              }}>
-              <Text style={styles.filterButtonText}>등급순</Text>
-            </Pressable>
-            <Pressable
-              style={[styles.filterButton, styles.modalButton]}
-              onPress={() => {
-                setSelectedSort('보상순');
-                setSortModalVisible(!sortModalVisible);
-              }}>
-              <Text style={styles.filterButtonText}>보상순</Text>
-            </Pressable>
-          </View>
-        </View>
-      </Modal>
+        onClose={() => setSortModalVisible(false)}
+        onSelectSort={sort => {
+          setSelectedSort(sort);
+          setSortModalVisible(false);
+        }}
+        selectedSort={selectedSort}
+      />
 
       <FlatList
         data={data}

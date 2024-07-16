@@ -5,7 +5,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import BottomTabNavigator from './BottomTabNavigator';
 
-import Home from '../screens/Home/homescreen';
+import Home from '../screens/Home/HomeScreen';
 import Alarm_Host from '../screens/Alarm/AlarmHostScreen';
 import Alarm_Hero from '../screens/Alarm/AlarmHeroScreen';
 import My from '../screens/MY/myscreen';
