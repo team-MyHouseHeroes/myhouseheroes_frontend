@@ -18,6 +18,7 @@ import addImagePlaceholder from 'C:/MyHouseHeroes/myhouseheroes_frontend/src/img
 const WriteHostScreen = () => {
   const [images, setImages] = useState<string[]>([]);
   const [title, setTitle] = useState<string>('');
+  const [selectedKeyword, setSelectedKeyword] = useState<string | null>(null);
 
   const handleImagePicker = async () => {
     if (images.length >= 10) {
@@ -41,7 +42,16 @@ const WriteHostScreen = () => {
 
   const handleKeywordPress = (keyword: string) => {
     setTitle(keyword);
+    setSelectedKeyword(keyword);
   };
+
+  const keywordList = [
+    '급해요',
+    '사례합니다',
+    '도와주세요',
+    '큰 일 났습니다',
+    '지금 바로 빨리 와주세요',
+  ];
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
@@ -77,20 +87,29 @@ const WriteHostScreen = () => {
         />
       </View>
       <View style={styles.section}>
-        <Text style={styles.label}>제목 추천</Text>
+        <Text style={styles.keywordlabel}>제목 추천</Text>
         <View style={styles.keywordContainer}>
-          {[
-            '급해요',
-            '사례합니다',
-            '도와주세요',
-            '큰 일 났습니다',
-            '지금 바로 빨리 와주세요',
-          ].map(keyword => (
+          {keywordList.map(keyword => (
             <TouchableOpacity
               key={keyword}
-              style={styles.keywordButton}
+              style={[
+                styles.keywordButton,
+                {
+                  backgroundColor:
+                    selectedKeyword === keyword ? '#FE4F18' : '#DDDDDD',
+                },
+              ]}
               onPress={() => handleKeywordPress(keyword)}>
-              <Text style={styles.keywordButtonText}>{keyword}</Text>
+              <Text
+                style={[
+                  styles.keywordButtonText,
+                  {
+                    color: selectedKeyword === keyword ? '#FFFFFF' : '#000000',
+                    fontWeight: selectedKeyword === keyword ? 'bold' : 'normal',
+                  },
+                ]}>
+                {keyword}
+              </Text>
             </TouchableOpacity>
           ))}
         </View>

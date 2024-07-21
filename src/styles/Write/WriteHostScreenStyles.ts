@@ -10,13 +10,21 @@ const WriteHostScreenStyles = StyleSheet.create({
   },
   section: {
     width: '100%',
-    marginBottom: 16,
+    marginBottom: 8,
   },
   label: {
     fontSize: 18,
     fontWeight: 'bold',
-    marginTop: 12,
-    marginBottom: 12,
+    marginTop: 8,
+    marginBottom: 8,
+    color: '#000000',
+  },
+  keywordlabel: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    marginTop: 8,
+    marginBottom: 8,
+    marginLeft: 8,
     color: '#000000',
   },
   input: {
@@ -66,6 +74,7 @@ const WriteHostScreenStyles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     marginTop: 8,
+    marginLeft: 8,
   },
   keywordButton: {
     backgroundColor: '#DDDDDD',
