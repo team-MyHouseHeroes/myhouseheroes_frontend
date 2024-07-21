@@ -36,14 +36,14 @@ const WriteHostScreenStyles = StyleSheet.create({
   },
   imageWrapper: {
     position: 'relative',
-    margin: 4,
+    margin: 5,
   },
   image: {
     width: 70,
     height: 70,
     borderRadius: 10,
     resizeMode: 'cover',
-    marginLeft: 4,
+    marginLeft: 5,
   },
   deleteButton: {
     position: 'absolute',
@@ -61,6 +61,39 @@ const WriteHostScreenStyles = StyleSheet.create({
     color: 'white',
     fontSize: 15,
     fontWeight: 'bold',
+  },
+  keywordContainer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    marginTop: 8,
+  },
+  keywordButton: {
+    backgroundColor: '#DDDDDD',
+    borderRadius: 20,
+    padding: 10,
+    margin: 4,
+    height: '40%',
+    alignSelf: 'flex-start',
+    minWidth: 110,
+  },
+  keywordButtonText: {
+    fontSize: 14,
+    color: '#000000',
+    textAlign: 'center',
+  },
+  inputWrapper: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  checkboxContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  checkboxLabel: {
+    marginLeft: 8,
+    fontSize: 14,
+    color: '#000000',
   },
 });
 

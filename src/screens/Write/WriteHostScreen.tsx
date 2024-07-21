@@ -1,3 +1,5 @@
+// src/screens/Write/WriteHostScreen.tsx
+
 import React, {useState} from 'react';
 import {
   View,
@@ -15,6 +17,7 @@ import addImagePlaceholder from 'C:/MyHouseHeroes/myhouseheroes_frontend/src/img
 
 const WriteHostScreen = () => {
   const [images, setImages] = useState<string[]>([]);
+  const [title, setTitle] = useState<string>('');
 
   const handleImagePicker = async () => {
     if (images.length >= 10) {
@@ -34,6 +37,10 @@ const WriteHostScreen = () => {
 
   const handleDeleteImage = (uri: string) => {
     setImages(images.filter(image => image !== uri));
+  };
+
+  const handleKeywordPress = (keyword: string) => {
+    setTitle(keyword);
   };
 
   return (
@@ -62,7 +69,31 @@ const WriteHostScreen = () => {
       </View>
       <View style={styles.section}>
         <Text style={styles.label}>제목</Text>
-        <TextInput style={styles.input} placeholder="제목을 입력하세요" />
+        <TextInput
+          style={styles.input}
+          placeholder="제목을 입력하세요"
+          value={title}
+          onChangeText={setTitle}
+        />
+      </View>
+      <View style={styles.section}>
+        <Text style={styles.label}>제목 추천</Text>
+        <View style={styles.keywordContainer}>
+          {[
+            '급해요',
+            '사례합니다',
+            '도와주세요',
+            '큰 일 났습니다',
+            '지금 바로 빨리 와주세요',
+          ].map(keyword => (
+            <TouchableOpacity
+              key={keyword}
+              style={styles.keywordButton}
+              onPress={() => handleKeywordPress(keyword)}>
+              <Text style={styles.keywordButtonText}>{keyword}</Text>
+            </TouchableOpacity>
+          ))}
+        </View>
       </View>
       <View style={styles.section}>
         <Text style={styles.label}>보상</Text>
