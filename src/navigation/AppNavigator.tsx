@@ -24,9 +24,19 @@ const AppNavigator = () => {
           options={{headerShown: false}}
         />
         <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Alarm" component={Alarm_Hero} />
+        <Stack.Screen name="Alarm_Hero" component={Alarm_Hero} />
+        <Stack.Screen name="Alarm_Host" component={Alarm_Host} />
         <Stack.Screen name="My" component={My} />
-        <Stack.Screen name="Write" component={Write_Host} />
+        <Stack.Screen
+          name="Write_Host"
+          component={Write_Host}
+          options={{headerShown: false, tabBarStyle: {display: 'none'}}}
+        />
+        <Stack.Screen
+          name="Write_Hero"
+          component={Write_Hero}
+          options={{headerShown: false, tabBarStyle: {display: 'none'}}}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -10,6 +10,8 @@ import Write_Host from '../screens/Write/WriteHostScreen';
 import Write_Hero from '../screens/Write/WriteHeroScreen';
 import My from '../screens/MY/myscreen';
 
+import WriteHostHeader from '../components/Write/WriteHostHeader';
+
 const homeIcon = require('../img/home.png');
 const alarmIcon = require('../img/alarm.png');
 const myIcon = require('../img/my.png');
@@ -52,7 +54,14 @@ const BottomTabNavigator = () => {
         },
       })}>
       <Tab.Screen name="Home" component={Home} />
-      <Tab.Screen name="Write" component={Write_Host} />
+      <Tab.Screen
+        name="Write"
+        component={Write_Host}
+        options={{
+          header: () => <WriteHostHeader />,
+          tabBarStyle: {display: 'none'},
+        }}
+      />
       <Tab.Screen name="Alarm" component={Alarm_Hero} />
       <Tab.Screen name="My" component={My} />
     </Tab.Navigator>

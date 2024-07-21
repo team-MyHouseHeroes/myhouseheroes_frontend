@@ -1,6 +1,8 @@
+// src/styles/Home/HomeScreenStyles.ts
+
 import {StyleSheet} from 'react-native';
 
-const styles = StyleSheet.create({
+const HomeScreenStyles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
@@ -134,4 +136,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default styles;
+export default HomeScreenStyles;
