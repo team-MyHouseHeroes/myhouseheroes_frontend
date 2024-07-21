@@ -1,16 +1,17 @@
 // src/components/Write/WriteHeroHeader.tsx
 
-import React from 'react';
-import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
+import React, {useState} from 'react';
+import {View, Text, TouchableOpacity} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import styles from '../../styles/Write/WriteHeroHeaderStyles';
+import ConfirmationHeroModal from './ConfirmationHeroModal';
 
 const WriteHeroHeader = () => {
   const navigation = useNavigation();
+  const [confirmationVisible, setConfirmationVisible] = useState(false);
 
-  // 게시글 등록 로직을 나중에 추가할 수 있음
   const handleRegister = () => {
-    // TODO: 게시글 등록 로직 추가
+    setConfirmationVisible(true);
   };
 
   return (
@@ -22,6 +23,10 @@ const WriteHeroHeader = () => {
       <TouchableOpacity onPress={handleRegister}>
         <Text style={styles.button}>등록</Text>
       </TouchableOpacity>
+      <ConfirmationHeroModal
+        visible={confirmationVisible}
+        onClose={() => setConfirmationVisible(false)}
+      />
     </View>
   );
 };
