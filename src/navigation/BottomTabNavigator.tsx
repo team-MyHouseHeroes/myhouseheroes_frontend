@@ -6,8 +6,11 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Home from '../screens/Home/HomeScreen';
 import Alarm_Host from '../screens/Alarm/AlarmHostScreen';
 import Alarm_Hero from '../screens/Alarm/AlarmHeroScreen';
+import Write_Host from '../screens/Write/WriteHostScreen';
+import Write_Hero from '../screens/Write/WriteHeroScreen';
 import My from '../screens/MY/myscreen';
-import Write from '../screens/Write/writescreen';
+
+import WriteHostHeader from '../components/Write/WriteHostHeader';
 
 const homeIcon = require('../img/home.png');
 const alarmIcon = require('../img/alarm.png');
@@ -51,7 +54,14 @@ const BottomTabNavigator = () => {
         },
       })}>
       <Tab.Screen name="Home" component={Home} />
-      <Tab.Screen name="Write" component={Write} />
+      <Tab.Screen
+        name="Write"
+        component={Write_Host}
+        options={{
+          header: () => <WriteHostHeader />,
+          tabBarStyle: {display: 'none'},
+        }}
+      />
       <Tab.Screen name="Alarm" component={Alarm_Hero} />
       <Tab.Screen name="My" component={My} />
     </Tab.Navigator>
