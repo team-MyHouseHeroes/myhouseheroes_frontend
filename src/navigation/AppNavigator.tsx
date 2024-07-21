@@ -6,11 +6,12 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import BottomTabNavigator from './BottomTabNavigator';
 
 import Home from '../screens/Home/HomeScreen';
-import Alarm_Host from '../screens/Alarm/AlarmHostScreen';
-import Alarm_Hero from '../screens/Alarm/AlarmHeroScreen';
 import Write_Host from '../screens/Write/WriteHostScreen';
 import Write_Hero from '../screens/Write/WriteHeroScreen';
-import My from '../screens/MY/myscreen';
+import Alarm_Host from '../screens/Alarm/AlarmHostScreen';
+import Alarm_Hero from '../screens/Alarm/AlarmHeroScreen';
+import MY_Host from '../screens/MY/MYHostScreen';
+import MY_Hero from '../screens/MY/MYHeroScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -24,9 +25,6 @@ const AppNavigator = () => {
           options={{headerShown: false}}
         />
         <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Alarm_Hero" component={Alarm_Hero} />
-        <Stack.Screen name="Alarm_Host" component={Alarm_Host} />
-        <Stack.Screen name="My" component={My} />
         <Stack.Screen
           name="Write_Host"
           component={Write_Host}
@@ -37,6 +35,10 @@ const AppNavigator = () => {
           component={Write_Hero}
           options={{headerShown: false, tabBarStyle: {display: 'none'}}}
         />
+        <Stack.Screen name="Alarm_Hero" component={Alarm_Hero} />
+        <Stack.Screen name="Alarm_Host" component={Alarm_Host} />
+        <Stack.Screen name="MY_Hero" component={MY_Hero} />
+        <Stack.Screen name="MY_Host" component={MY_Host} />
       </Stack.Navigator>
     </NavigationContainer>
   );

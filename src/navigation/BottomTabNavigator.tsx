@@ -4,11 +4,12 @@ import React from 'react';
 import {Image} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Home from '../screens/Home/HomeScreen';
-import Alarm_Host from '../screens/Alarm/AlarmHostScreen';
-import Alarm_Hero from '../screens/Alarm/AlarmHeroScreen';
 import Write_Host from '../screens/Write/WriteHostScreen';
 import Write_Hero from '../screens/Write/WriteHeroScreen';
-import My from '../screens/MY/myscreen';
+import Alarm_Host from '../screens/Alarm/AlarmHostScreen';
+import Alarm_Hero from '../screens/Alarm/AlarmHeroScreen';
+import MY_Host from '../screens/MY/MYHostScreen';
+import MY_Hero from '../screens/MY/MYHeroScreen';
 
 import WriteHostHeader from '../components/Write/WriteHostHeader';
 import WriteHeroHeader from '../components/Write/WriteHeroHeader';
@@ -31,7 +32,7 @@ const BottomTabNavigator = () => {
             iconSource = homeIcon;
           } else if (route.name === 'Alarm') {
             iconSource = alarmIcon;
-          } else if (route.name === 'My') {
+          } else if (route.name === 'MY') {
             iconSource = myIcon;
           } else if (route.name === 'Write') {
             iconSource = writeIcon;
@@ -64,7 +65,7 @@ const BottomTabNavigator = () => {
         }}
       />
       <Tab.Screen name="Alarm" component={Alarm_Hero} />
-      <Tab.Screen name="My" component={My} />
+      <Tab.Screen name="MY" component={MY_Host} />
     </Tab.Navigator>
   );
 };
