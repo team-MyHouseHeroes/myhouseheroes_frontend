@@ -1,3 +1,5 @@
+// src/styles/Write/WriteHostScreenStyles.ts
+
 import {StyleSheet} from 'react-native';
 
 const WriteHostScreenStyles = StyleSheet.create({
@@ -10,7 +12,7 @@ const WriteHostScreenStyles = StyleSheet.create({
   },
   section: {
     width: '100%',
-    marginBottom: 8,
+    marginBottom: 12,
   },
   label: {
     fontSize: 18,
@@ -26,6 +28,13 @@ const WriteHostScreenStyles = StyleSheet.create({
     marginBottom: 8,
     marginLeft: 8,
     color: '#000000',
+  },
+  checkboxLabel: {
+    fontSize: 14,
+    marginLeft: '60%',
+  },
+  checkbox: {
+    marginLeft: 'auto',
   },
   input: {
     width: '100%',
@@ -90,19 +99,10 @@ const WriteHostScreenStyles = StyleSheet.create({
     color: '#000000',
     textAlign: 'center',
   },
-  inputWrapper: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-  },
   checkboxContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-  },
-  checkboxLabel: {
-    marginLeft: 8,
-    fontSize: 14,
-    color: '#000000',
+    marginTop: 8,
   },
 });
 

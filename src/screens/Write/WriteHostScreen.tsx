@@ -12,6 +12,7 @@ import {
   Alert,
 } from 'react-native';
 import {launchImageLibrary} from 'react-native-image-picker';
+import CheckBox from '@react-native-community/checkbox';
 import styles from '../../styles/Write/WriteHostScreenStyles';
 import addImagePlaceholder from 'C:/MyHouseHeroes/myhouseheroes_frontend/src/img/addImage.png';
 
@@ -19,6 +20,8 @@ const WriteHostScreen = () => {
   const [images, setImages] = useState<string[]>([]);
   const [title, setTitle] = useState<string>('');
   const [selectedKeyword, setSelectedKeyword] = useState<string | null>(null);
+  const [rememberReward, setRememberReward] = useState<boolean>(false);
+  const [rememberTool, setRememberTool] = useState<boolean>(false);
 
   const handleImagePicker = async () => {
     if (images.length >= 10) {
@@ -117,10 +120,40 @@ const WriteHostScreen = () => {
       <View style={styles.section}>
         <Text style={styles.label}>보상</Text>
         <TextInput style={styles.input} placeholder="보상을 입력하세요" />
+        <View style={styles.checkboxContainer}>
+          <Text
+            style={[
+              styles.checkboxLabel,
+              {color: rememberReward ? '#FE4F18' : '#AFB1B6'},
+            ]}>
+            입력 사항 기억하기
+          </Text>
+          <CheckBox
+            value={rememberReward}
+            onValueChange={setRememberReward}
+            tintColors={{true: '#FE4F18', false: '#AFB1B6'}}
+            style={styles.checkbox}
+          />
+        </View>
       </View>
       <View style={styles.section}>
         <Text style={styles.label}>도구</Text>
         <TextInput style={styles.input} placeholder="도구를 입력하세요" />
+        <View style={styles.checkboxContainer}>
+          <Text
+            style={[
+              styles.checkboxLabel,
+              {color: rememberTool ? '#FE4F18' : '#AFB1B6'},
+            ]}>
+            입력 사항 기억하기
+          </Text>
+          <CheckBox
+            value={rememberTool}
+            onValueChange={setRememberTool}
+            tintColors={{true: '#FE4F18', false: '#AFB1B6'}}
+            style={styles.checkbox}
+          />
+        </View>
       </View>
       <View style={styles.section}>
         <Text style={styles.label}>기타 사항 작성</Text>
