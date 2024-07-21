@@ -1,3 +1,5 @@
+// src/styles/Write/WriteHeroScreenStyles.ts
+
 import {StyleSheet} from 'react-native';
 
 const WriteHeroScreenStyles = StyleSheet.create({
