@@ -49,7 +49,7 @@ const WriteHostScreen = () => {
   };
 
   const keywordList = [
-    '급해요',
+    '정말 급합니다',
     '사례합니다',
     '도와주세요',
     '큰 일 났습니다',

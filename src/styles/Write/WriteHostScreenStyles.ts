@@ -56,8 +56,8 @@ const WriteHostScreenStyles = StyleSheet.create({
     margin: 5,
   },
   image: {
-    width: 70,
-    height: 70,
+    width: 55,
+    height: 55,
     borderRadius: 10,
     resizeMode: 'cover',
     marginLeft: 5,
