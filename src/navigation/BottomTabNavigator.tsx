@@ -11,6 +11,7 @@ import Write_Hero from '../screens/Write/WriteHeroScreen';
 import My from '../screens/MY/myscreen';
 
 import WriteHostHeader from '../components/Write/WriteHostHeader';
+import WriteHeroHeader from '../components/Write/WriteHeroHeader';
 
 const homeIcon = require('../img/home.png');
 const alarmIcon = require('../img/alarm.png');
