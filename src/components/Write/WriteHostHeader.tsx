@@ -1,16 +1,26 @@
 // src/components/Write/WriteHostHeader.tsx
 
-import React from 'react';
-import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
+import React, {useState} from 'react';
+import {View, Text, TouchableOpacity} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import styles from '../../styles/Write/WriteHostHeaderStyles';
+import RegisterOptionsModal from './RegisterOptionsModal';
 
 const WriteHostHeader = () => {
   const navigation = useNavigation();
+  const [modalVisible, setModalVisible] = useState(false);
+  const [registerOptions, setRegisterOptions] = useState({
+    gender: null,
+    grade: null,
+  });
 
-  // 게시글 등록 로직을 나중에 추가할 수 있음
   const handleRegister = () => {
-    // TODO: 게시글 등록 로직 추가
+    setModalVisible(true);
+  };
+
+  const handleSaveOptions = options => {
+    setRegisterOptions(options);
+    console.log('Saved options:', options); // 콘솔에 저장된 값 출력
   };
 
   return (
@@ -22,6 +32,11 @@ const WriteHostHeader = () => {
       <TouchableOpacity onPress={handleRegister}>
         <Text style={styles.button}>등록</Text>
       </TouchableOpacity>
+      <RegisterOptionsModal
+        visible={modalVisible}
+        onClose={() => setModalVisible(false)}
+        onSave={handleSaveOptions}
+      />
     </View>
   );
 };
