@@ -101,7 +101,7 @@ const MYHostScreenStyles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
   },
-  heroRankText: {
+  hostRankText: {
     fontSize: 12,
     color: '#A0A0A0',
     marginRight: 8,

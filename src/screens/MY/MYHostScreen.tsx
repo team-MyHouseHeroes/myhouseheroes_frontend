@@ -6,14 +6,14 @@ import styles from '../../styles/MY/MYHostScreenStyles';
 
 const MYHostScreen = () => {
   // Dummy data
-  const profileImage = require('C:/MyHouseHeroes/myhouseheroes_frontend/src/img/myscreenhero.png');
+  const profileImage = require('C:/MyHouseHeroes/myhouseheroes_frontend/src/img/myscreenhost.png');
   const rightIcon = require('C:/MyHouseHeroes/myhouseheroes_frontend/src/img/rightIcon.png');
   const editProfileIcon = require('C:/MyHouseHeroes/myhouseheroes_frontend/src/img/editprofileIcon.png');
-  const userType = '히어로';
-  const userName = '바잡송';
+  const userType = '호스트';
+  const userName = '죽어가는 눈송이';
   const schoolName = '숙명여자대학교';
   const introText =
-    '안녕하세요 청파동 바잡송입니다\n여러분을 위해 항상 준비되어 있습니다';
+    '저희 집은 바선생 소굴입니다\n히어로 선생님 여러분을 간절히 기다리고 있습니다';
   const ratings = {rating: '5.0', reviews: '20', completions: '10'};
 
   return (
@@ -33,9 +33,9 @@ const MYHostScreen = () => {
       </View>
       <Text style={styles.introText}>{introText}</Text>
       <View style={styles.rankButton}>
-        <Text style={styles.rankButtonText}>용감하게 벌레 잡는 손</Text>
+        <Text style={styles.rankButtonText}>하울의 움직이는 성</Text>
         <View style={styles.rankButtonRight}>
-          <Text style={styles.heroRankText}>히어로 등급</Text>
+          <Text style={styles.hostRankText}>호스트 등급</Text>
           <TouchableOpacity>
             <Image source={rightIcon} style={styles.rightIcon} />
           </TouchableOpacity>
