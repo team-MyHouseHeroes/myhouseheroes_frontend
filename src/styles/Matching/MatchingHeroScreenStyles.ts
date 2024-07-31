@@ -1,3 +1,5 @@
+// src/styles/Matching/MatchingHeroScreenStyles.ts
+
 import {StyleSheet} from 'react-native';
 
 const MatchingHeroScreenStyles = StyleSheet.create({
@@ -91,6 +93,25 @@ const MatchingHeroScreenStyles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     color: '#ffffff',
+  },
+  overlay: {
+    flex: 1,
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+  },
+  modal: {
+    backgroundColor: 'white',
+    padding: 6,
+    borderRadius: 20,
+    marginBottom: 100,
+    width: '90%',
+  },
+  modalText: {
+    fontSize: 16,
+    textAlign: 'center',
+    paddingHorizontal: 20,
+    paddingVertical: 10,
   },
 });
 

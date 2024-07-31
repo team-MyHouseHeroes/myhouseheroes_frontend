@@ -1,11 +1,24 @@
+// src/screens/Matching/MatchingHeroScreen.tsx
+
 import React, {useState} from 'react';
 import {View, Text, Image, ScrollView} from 'react-native';
 import MatchingHeader from '../../components/Matching/MatchingHeader';
 import RequestMatching from '../../components/Matching/RequestMatching';
+import RequestMatchingAlarm from '../../components/Matching/RequestMatchingAlarm';
 import styles from '../../styles/Matching/MatchingHeroScreenStyles';
 
 const MatchingHeroScreen = () => {
   const [requestStatus, setRequestStatus] = useState('요청 중');
+  const [modalVisible, setModalVisible] = useState(false);
+  const [isRequesting, setIsRequesting] = useState(false);
+
+  const handleRequestMatching = () => {
+    setModalVisible(true);
+    setTimeout(() => {
+      setIsRequesting(true);
+      setModalVisible(false);
+    }, 1500);
+  };
 
   return (
     <View style={{flex: 1}}>
@@ -60,9 +73,12 @@ const MatchingHeroScreen = () => {
         </View>
       </ScrollView>
       <RequestMatching
-        onPress={() => {
-          /* 매칭 요청 함수 */
-        }}
+        onPress={handleRequestMatching}
+        isRequesting={isRequesting}
+      />
+      <RequestMatchingAlarm
+        visible={modalVisible}
+        onDismiss={() => setIsRequesting(false)}
       />
     </View>
   );
