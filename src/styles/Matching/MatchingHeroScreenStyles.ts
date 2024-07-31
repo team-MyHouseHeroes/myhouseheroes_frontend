@@ -110,6 +110,22 @@ const MatchingHeroScreenStyles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#ffffff',
   },
+  exterminateMatchButton: {
+    backgroundColor: '#AFB1B6',
+    paddingVertical: 16,
+    paddingHorizontal: 32,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 8,
+    alignSelf: 'center',
+    marginBottom: 16,
+    width: '90%',
+  },
+  exterminateMatchButtonText: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#ffffff',
+  },
   overlay: {
     flex: 1,
     justifyContent: 'flex-end',
