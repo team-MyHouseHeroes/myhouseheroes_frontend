@@ -1,17 +1,23 @@
-// C:\MyHouseHeroes\myhouseheroes_frontend\src\screens\Matching\MatchingHeroScreen.tsx
-
-import React from 'react';
-import {View, Text, Image, Button, ScrollView} from 'react-native';
-import MatchingHeader from '../../components/Matching/MatchingHeader'; // import the new header
+import React, {useState} from 'react';
+import {View, Text, Image, ScrollView, TouchableOpacity} from 'react-native';
+import MatchingHeader from '../../components/Matching/MatchingHeader';
 import styles from '../../styles/Matching/MatchingHeroScreenStyles';
 
 const MatchingHeroScreen = () => {
+  const [requestStatus, setRequestStatus] = useState('요청 중');
+
   return (
     <View style={{flex: 1}}>
       <MatchingHeader />
       <ScrollView contentContainerStyle={styles.container}>
-        <Text style={styles.title}>살려주세요</Text>
-        <View style={styles.imageContainer}>
+        <View style={styles.titlecontainer}>
+          <Text style={styles.detailTitle}>호스트 요청</Text>
+          <Text style={styles.title}>살려주세요</Text>
+        </View>
+        <ScrollView
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          contentContainerStyle={styles.imageScrollContainer}>
           <Image
             source={require('../../img/matchingscreenImage1.png')}
             style={styles.image}
@@ -24,7 +30,7 @@ const MatchingHeroScreen = () => {
             source={require('../../img/matchingscreenImage3.png')}
             style={styles.image}
           />
-        </View>
+        </ScrollView>
         <View style={styles.detailsContainer}>
           <Text style={styles.detailTitle}>벌레 종류</Text>
           <Text style={styles.detailText}>바퀴벌레</Text>
@@ -40,18 +46,25 @@ const MatchingHeroScreen = () => {
         </View>
         <View style={styles.footer}>
           <View style={styles.userInfo}>
-            <Text style={styles.userName}>죽어가는 눈송이</Text>
-            <Text style={styles.userStatus}>호스트 등급 5등급</Text>
+            <Image
+              source={require('C:/MyHouseHeroes/myhouseheroes_frontend/src/img/myscreenhost.png')}
+              style={styles.userImage}
+            />
+            <View>
+              <Text style={styles.userName}>죽어가는 눈송이</Text>
+              <Text style={styles.userStatus}>호스트 등급 5등급</Text>
+            </View>
+            <Text style={styles.requestStatus}>{requestStatus}</Text>
           </View>
-          <Button
-            title="매칭 요청하기"
-            onPress={() => {
-              /* 매칭 요청 함수 */
-            }}
-            color="#ff6f00"
-          />
         </View>
       </ScrollView>
+      <TouchableOpacity
+        style={styles.matchButton}
+        onPress={() => {
+          /* 매칭 요청 함수 */
+        }}>
+        <Text style={styles.matchButtonText}>매칭 요청하기</Text>
+      </TouchableOpacity>
     </View>
   );
 };
