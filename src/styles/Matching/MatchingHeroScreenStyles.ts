@@ -10,11 +10,23 @@ const MatchingHeroScreenStyles = StyleSheet.create({
   },
   title: {
     fontSize: 24,
-    marginBottom: 20,
     color: '#000000',
   },
   titlecontainer: {
-    marginLeft: 4,
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 20,
+  },
+  iconContainer: {
+    marginRight: 4,
+    marginTop: '8%',
+  },
+  icon: {
+    width: 40,
+    height: 40,
+  },
+  titleTextContainer: {
+    flex: 1,
   },
   imageScrollContainer: {
     flexDirection: 'row',

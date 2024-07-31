@@ -1,7 +1,7 @@
 // src/screens/Matching/MatchingHeroScreen.tsx
 
 import React, {useState} from 'react';
-import {View, Text, Image, ScrollView} from 'react-native';
+import {View, Text, Image, ScrollView, TouchableOpacity} from 'react-native';
 import MatchingHeader from '../../components/Matching/MatchingHeader';
 import RequestMatching from '../../components/Matching/RequestMatching';
 import RequestMatchingAlarm from '../../components/Matching/RequestMatchingAlarm';
@@ -38,13 +38,27 @@ const MatchingHeroScreen = () => {
     }, 1500);
   };
 
+  const handleMoreIconPress = () => {
+    // 아이콘 클릭 시 동작을 여기에 추가
+  };
+
   return (
     <View style={{flex: 1}}>
       <MatchingHeader />
       <ScrollView contentContainerStyle={styles.container}>
         <View style={styles.titlecontainer}>
-          <Text style={styles.detailTitle}>호스트 요청</Text>
-          <Text style={styles.title}>{dummyData.title}</Text>
+          <View style={styles.titleTextContainer}>
+            <Text style={styles.detailTitle}>호스트 요청</Text>
+            <Text style={styles.title}>{dummyData.title}</Text>
+          </View>
+          <TouchableOpacity
+            onPress={handleMoreIconPress}
+            style={styles.iconContainer}>
+            <Image
+              source={require('../../img/moreIcon.png')}
+              style={styles.icon}
+            />
+          </TouchableOpacity>
         </View>
         <ScrollView
           horizontal
