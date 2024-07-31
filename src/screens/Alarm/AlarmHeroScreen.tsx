@@ -1,3 +1,5 @@
+// src/screens/Alarm/AlarmHeroScreen
+
 import React from 'react';
 import {View, Text, FlatList, Image} from 'react-native';
 import styles from '../../styles/Alarm/AlarmHeroScreenStyles';

@@ -2,9 +2,12 @@
 
 import React from 'react';
 import {View, Text, Image, ScrollView, TouchableOpacity} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 import styles from '../../styles/MY/MYHostScreenStyles';
 
 const MYHostScreen = () => {
+  const navigation = useNavigation();
+
   // Dummy data
   const profileImage = require('C:/MyHouseHeroes/myhouseheroes_frontend/src/img/myscreenhost.png');
   const rightIcon = require('C:/MyHouseHeroes/myhouseheroes_frontend/src/img/rightIcon.png');
@@ -57,6 +60,7 @@ const MYHostScreen = () => {
       </View>
       <View style={styles.menuContainer}>
         <TouchableOpacity>
+          {/* onPress={() => navigation.navigate('Matching_Hero')}> */}
           <Text style={styles.subMenu}>본인 인증</Text>
         </TouchableOpacity>
         <TouchableOpacity>

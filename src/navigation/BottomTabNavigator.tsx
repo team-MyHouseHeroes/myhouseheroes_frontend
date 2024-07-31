@@ -11,6 +11,8 @@ import Alarm_Host from '../screens/Alarm/AlarmHostScreen';
 import Alarm_Hero from '../screens/Alarm/AlarmHeroScreen';
 import MY_Host from '../screens/MY/MYHostScreen';
 import MY_Hero from '../screens/MY/MYHeroScreen';
+import Matching_Host from '../screens/Matching/MatchingHostScreen';
+import Matching_Hero from '../screens/Matching/MatchingHeroScreen';
 
 import WriteHostHeader from '../components/Write/WriteHostHeader';
 import WriteHeroHeader from '../components/Write/WriteHeroHeader';

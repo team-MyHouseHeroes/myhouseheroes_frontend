@@ -1,3 +1,5 @@
+// src/screens/Write/WriteHeroScreen.tsx
+
 import React, {useState} from 'react';
 import {
   View,
@@ -14,7 +16,7 @@ import CheckBox from '@react-native-community/checkbox';
 import styles from '../../styles/Write/WriteHeroScreenStyles';
 import addImagePlaceholder from 'C:/MyHouseHeroes/myhouseheroes_frontend/src/img/addImage.png';
 
-const WriteHostScreen = () => {
+const WriteHeroScreen = () => {
   const [images, setImages] = useState<string[]>([]);
   const [title, setTitle] = useState<string>('');
   const [rememberReward, setRememberReward] = useState<boolean>(false);
@@ -102,4 +104,4 @@ const WriteHostScreen = () => {
   );
 };
 
-export default WriteHostScreen;
+export default WriteHeroScreen;
