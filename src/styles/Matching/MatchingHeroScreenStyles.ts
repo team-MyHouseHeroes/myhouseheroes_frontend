@@ -78,7 +78,7 @@ const MatchingHeroScreenStyles = StyleSheet.create({
     color: '#000000',
     marginLeft: '35%',
   },
-  matchButton: {
+  requestMatchButton: {
     backgroundColor: '#FE4F18',
     paddingVertical: 16,
     paddingHorizontal: 32,
@@ -89,7 +89,23 @@ const MatchingHeroScreenStyles = StyleSheet.create({
     marginBottom: 16,
     width: '90%',
   },
-  matchButtonText: {
+  requestMatchButtonText: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#ffffff',
+  },
+  successMatchButton: {
+    backgroundColor: '#000000',
+    paddingVertical: 16,
+    paddingHorizontal: 32,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 8,
+    alignSelf: 'center',
+    marginBottom: 16,
+    width: '90%',
+  },
+  successMatchButtonText: {
     fontSize: 18,
     fontWeight: 'bold',
     color: '#ffffff',

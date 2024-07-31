@@ -6,8 +6,8 @@ import styles from '../../styles/Matching/MatchingHeroScreenStyles';
 
 const RequestMatching = ({onPress, isRequesting}) => {
   return (
-    <TouchableOpacity style={styles.matchButton} onPress={onPress}>
-      <Text style={styles.matchButtonText}>
+    <TouchableOpacity style={styles.requestMatchButton} onPress={onPress}>
+      <Text style={styles.requestMatchButtonText}>
         {isRequesting ? '매칭 요청 중' : '매칭 요청하기'}
       </Text>
     </TouchableOpacity>
