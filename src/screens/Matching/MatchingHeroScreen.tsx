@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
-import {View, Text, Image, ScrollView, TouchableOpacity} from 'react-native';
+import {View, Text, Image, ScrollView} from 'react-native';
 import MatchingHeader from '../../components/Matching/MatchingHeader';
+import RequestMatching from '../../components/Matching/RequestMatching';
 import styles from '../../styles/Matching/MatchingHeroScreenStyles';
 
 const MatchingHeroScreen = () => {
@@ -58,13 +59,11 @@ const MatchingHeroScreen = () => {
           </View>
         </View>
       </ScrollView>
-      <TouchableOpacity
-        style={styles.matchButton}
+      <RequestMatching
         onPress={() => {
           /* 매칭 요청 함수 */
-        }}>
-        <Text style={styles.matchButtonText}>매칭 요청하기</Text>
-      </TouchableOpacity>
+        }}
+      />
     </View>
   );
 };
