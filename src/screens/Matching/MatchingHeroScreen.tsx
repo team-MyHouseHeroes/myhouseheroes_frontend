@@ -3,7 +3,8 @@
 import React, {useState} from 'react';
 import {View, Text, Image, ScrollView, TouchableOpacity} from 'react-native';
 import MatchingHeader from '../../components/Matching/MatchingHeader';
-import ChangeStatusModal from '../../components/Matching/ChangeStatusModal';
+import RequestMatching from '../../components/Matching/RequestMatching';
+import RequestMatchingAlarm from '../../components/Matching/RequestMatchingAlarm';
 import styles from '../../styles/Matching/MatchingHeroScreenStyles';
 
 // Dummy Data
@@ -27,24 +28,17 @@ const dummyData = {
 
 const MatchingHeroScreen = () => {
   const [modalVisible, setModalVisible] = useState(false);
-  const [requestStatus, setRequestStatus] = useState(dummyData.requestStatus);
+  const [isRequesting, setIsRequesting] = useState(false);
 
-  const handleMoreIconPress = () => {
-    // 아이콘 클릭 시 동작을 여기에 추가
-  };
-
-  const handleStatusPress = () => {
+  const handleRequestMatching = () => {
     setModalVisible(true);
+    setTimeout(() => {
+      setIsRequesting(true);
+      setModalVisible(false);
+    }, 1500);
   };
 
-  const handleModalClose = () => {
-    setModalVisible(false);
-  };
-
-  const handleStatusSelect = status => {
-    setRequestStatus(status);
-    setModalVisible(false);
-  };
+  const handleMoreIconPress = () => {};
 
   return (
     <View style={{flex: 1}}>
@@ -92,17 +86,17 @@ const MatchingHeroScreen = () => {
               <Text style={styles.userName}>{dummyData.userName}</Text>
               <Text style={styles.userStatus}>{dummyData.userStatus}</Text>
             </View>
-            <TouchableOpacity onPress={handleStatusPress}>
-              <Text style={styles.requestStatus}>{requestStatus}</Text>
-            </TouchableOpacity>
+            <Text style={styles.requestStatus}>{dummyData.requestStatus}</Text>
           </View>
         </View>
       </ScrollView>
-      <ChangeStatusModal
+      <RequestMatching
+        onPress={handleRequestMatching}
+        isRequesting={isRequesting}
+      />
+      <RequestMatchingAlarm
         visible={modalVisible}
-        onClose={handleModalClose}
-        onSelect={handleStatusSelect}
-        selectedStatus={requestStatus}
+        onDismiss={() => setIsRequesting(false)}
       />
     </View>
   );

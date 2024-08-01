@@ -8,7 +8,7 @@ import {
   Modal,
   TouchableWithoutFeedback,
 } from 'react-native';
-import styles from '../../styles/Matching/MatchingHeroScreenStyles';
+import styles from '../../styles/Matching/MatchingHostScreenStyles';
 
 const ChangeStatusModal = ({visible, onClose, onSelect, selectedStatus}) => {
   const statuses = ['요청 중', '퇴치 중', '퇴치 완료'];
