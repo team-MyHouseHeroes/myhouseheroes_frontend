@@ -38,9 +38,7 @@ const MatchingHostScreen = () => {
     }, 1500);
   };
 
-  const handleMoreIconPress = () => {
-    // 아이콘 클릭 시 동작을 여기에 추가
-  };
+  const handleMoreIconPress = () => {};
 
   return (
     <View style={{flex: 1}}>

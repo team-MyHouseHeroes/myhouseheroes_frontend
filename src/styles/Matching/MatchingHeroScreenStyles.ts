@@ -61,7 +61,7 @@ const MatchingHeroScreenStyles = StyleSheet.create({
     padding: 4,
     backgroundColor: '#ffffff',
     borderRadius: 8,
-    marginBottom: 16,
+    marginBottom: 160,
   },
   userInfo: {
     flexDirection: 'row',
@@ -88,13 +88,38 @@ const MatchingHeroScreenStyles = StyleSheet.create({
     fontSize: 14,
     fontWeight: 'bold',
     color: '#000000',
-    marginLeft: '35%',
+    marginLeft: '45%',
   },
   overlay: {
     flex: 1,
-    justifyContent: 'flex-end',
+    justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
+  },
+  modalContainer: {
+    width: '35%',
+    backgroundColor: '#FFFFFF',
+    borderRadius: 10,
+    padding: 16,
+    alignItems: 'center',
+    position: 'absolute',
+    top: '80%',
+    left: '55%',
+  },
+  modalOption: {
+    padding: 8,
+    width: '100%',
+    alignItems: 'flex-start',
+  },
+  selectedOption: {
+    backgroundColor: '#FFFFFF',
+  },
+  modalOptionText: {
+    fontSize: 14,
+    color: '#AFB1B6',
+  },
+  selectedOptionText: {
+    color: '#000000',
   },
 });
 

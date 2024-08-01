@@ -3,6 +3,7 @@
 import React, {useState} from 'react';
 import {View, Text, Image, ScrollView, TouchableOpacity} from 'react-native';
 import MatchingHeader from '../../components/Matching/MatchingHeader';
+import ChangeStatusModal from '../../components/Matching/ChangeStatusModal';
 import styles from '../../styles/Matching/MatchingHeroScreenStyles';
 
 // Dummy Data
@@ -25,8 +26,24 @@ const dummyData = {
 };
 
 const MatchingHeroScreen = () => {
+  const [modalVisible, setModalVisible] = useState(false);
+  const [requestStatus, setRequestStatus] = useState(dummyData.requestStatus);
+
   const handleMoreIconPress = () => {
     // 아이콘 클릭 시 동작을 여기에 추가
+  };
+
+  const handleStatusPress = () => {
+    setModalVisible(true);
+  };
+
+  const handleModalClose = () => {
+    setModalVisible(false);
+  };
+
+  const handleStatusSelect = status => {
+    setRequestStatus(status);
+    setModalVisible(false);
   };
 
   return (
@@ -75,10 +92,18 @@ const MatchingHeroScreen = () => {
               <Text style={styles.userName}>{dummyData.userName}</Text>
               <Text style={styles.userStatus}>{dummyData.userStatus}</Text>
             </View>
-            <Text style={styles.requestStatus}>{dummyData.requestStatus}</Text>
+            <TouchableOpacity onPress={handleStatusPress}>
+              <Text style={styles.requestStatus}>{requestStatus}</Text>
+            </TouchableOpacity>
           </View>
         </View>
       </ScrollView>
+      <ChangeStatusModal
+        visible={modalVisible}
+        onClose={handleModalClose}
+        onSelect={handleStatusSelect}
+        selectedStatus={requestStatus}
+      />
     </View>
   );
 };
