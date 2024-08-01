@@ -1,8 +1,8 @@
-// src/styles/Matching/MatchingHeroScreenStyles.ts
+// src/styles/Matching/MatchingHostScreenStyles.ts
 
 import {StyleSheet} from 'react-native';
 
-const MatchingHeroScreenStyles = StyleSheet.create({
+const MatchingHostScreenStyles = StyleSheet.create({
   container: {
     flexGrow: 1,
     padding: 16,
@@ -90,12 +90,73 @@ const MatchingHeroScreenStyles = StyleSheet.create({
     color: '#000000',
     marginLeft: '35%',
   },
+  requestMatchButton: {
+    backgroundColor: '#FE4F18',
+    paddingVertical: 16,
+    paddingHorizontal: 32,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 8,
+    alignSelf: 'center',
+    marginBottom: 16,
+    width: '90%',
+  },
+  requestMatchButtonText: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#ffffff',
+  },
+  successMatchButton: {
+    backgroundColor: '#000000',
+    paddingVertical: 16,
+    paddingHorizontal: 32,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 8,
+    alignSelf: 'center',
+    marginBottom: 16,
+    width: '90%',
+  },
+  successMatchButtonText: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#ffffff',
+  },
+  exterminateMatchButton: {
+    backgroundColor: '#AFB1B6',
+    paddingVertical: 16,
+    paddingHorizontal: 32,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 8,
+    alignSelf: 'center',
+    marginBottom: 16,
+    width: '90%',
+  },
+  exterminateMatchButtonText: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#ffffff',
+  },
   overlay: {
     flex: 1,
     justifyContent: 'flex-end',
     alignItems: 'center',
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
   },
+  modal: {
+    backgroundColor: 'white',
+    padding: 6,
+    borderRadius: 20,
+    marginBottom: 100,
+    width: '90%',
+  },
+  modalText: {
+    fontSize: 16,
+    textAlign: 'center',
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+  },
 });
 
-export default MatchingHeroScreenStyles;
+export default MatchingHostScreenStyles;

@@ -3,8 +3,6 @@
 import React, {useState} from 'react';
 import {View, Text, Image, ScrollView, TouchableOpacity} from 'react-native';
 import MatchingHeader from '../../components/Matching/MatchingHeader';
-import RequestMatching from '../../components/Matching/RequestMatching';
-import RequestMatchingAlarm from '../../components/Matching/RequestMatchingAlarm';
 import styles from '../../styles/Matching/MatchingHeroScreenStyles';
 
 // Dummy Data
@@ -27,17 +25,6 @@ const dummyData = {
 };
 
 const MatchingHeroScreen = () => {
-  const [modalVisible, setModalVisible] = useState(false);
-  const [isRequesting, setIsRequesting] = useState(false);
-
-  const handleRequestMatching = () => {
-    setModalVisible(true);
-    setTimeout(() => {
-      setIsRequesting(true);
-      setModalVisible(false);
-    }, 1500);
-  };
-
   const handleMoreIconPress = () => {
     // 아이콘 클릭 시 동작을 여기에 추가
   };
@@ -92,14 +79,6 @@ const MatchingHeroScreen = () => {
           </View>
         </View>
       </ScrollView>
-      <RequestMatching
-        onPress={handleRequestMatching}
-        isRequesting={isRequesting}
-      />
-      <RequestMatchingAlarm
-        visible={modalVisible}
-        onDismiss={() => setIsRequesting(false)}
-      />
     </View>
   );
 };

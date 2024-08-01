@@ -59,8 +59,7 @@ const MYHostScreen = () => {
         </TouchableOpacity>
       </View>
       <View style={styles.menuContainer}>
-        <TouchableOpacity>
-          {/* onPress={() => navigation.navigate('Matching_Hero')}> */}
+        <TouchableOpacity onPress={() => navigation.navigate('Matching_Hero')}>
           <Text style={styles.subMenu}>본인 인증</Text>
         </TouchableOpacity>
         <TouchableOpacity>

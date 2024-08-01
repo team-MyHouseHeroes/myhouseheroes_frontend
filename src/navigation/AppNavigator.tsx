@@ -63,6 +63,11 @@ const AppNavigator = () => {
               component={Matching_Hero}
               options={{headerShown: false}}
             />
+            <Stack.Screen
+              name="Matching_Host"
+              component={Matching_Host}
+              options={{headerShown: false}}
+            />
           </>
         )}
       </Stack.Navigator>
