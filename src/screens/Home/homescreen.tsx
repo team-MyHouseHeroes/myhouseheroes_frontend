@@ -9,6 +9,7 @@ import {
   TouchableOpacity,
   Modal,
 } from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 import styles from '../../styles/Home/HomeScreenStyles';
 import StatusButton from '../../components/Home/StatusButton';
 import PostFilterModal from '../../components/Home/PostFilterModal';
@@ -62,6 +63,7 @@ const Home = () => {
   const [selectedSort, setSelectedSort] = useState('최신순');
   const [filterModalVisible, setFilterModalVisible] = useState(false);
   const [sortModalVisible, setSortModalVisible] = useState(false);
+  const navigation = useNavigation();
 
   const toggleFilterModal = () => {
     setFilterModalVisible(!filterModalVisible);
@@ -76,8 +78,16 @@ const Home = () => {
       ? styles.itemContent
       : [styles.itemContent, {marginBottom: 28}];
 
+    const handlePress = () => {
+      if (item.id === '1') {
+        navigation.navigate('Matching_Hero');
+      }
+    };
+
     return (
-      <View style={styles.itemContainer}>
+      <TouchableOpacity
+        onPress={item.id === '1' ? handlePress : null}
+        style={styles.itemContainer}>
         <Image source={item.image} style={styles.itemImage} />
         <View style={itemContentStyle}>
           <Text style={styles.itemTitle}>{item.title}</Text>
@@ -87,7 +97,7 @@ const Home = () => {
           </View>
           {item.status && <StatusButton text={item.status} />}
         </View>
-      </View>
+      </TouchableOpacity>
     );
   };
 
