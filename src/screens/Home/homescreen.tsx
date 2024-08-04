@@ -19,18 +19,18 @@ const downIcon = require('../../img/downIcon.png');
 const data = [
   {
     id: '1',
-    title: '무엇이든지 해결해주는 해결사 눈송이 입니다',
-    description: '해결사 눈송이 / 히어로 등급 2등급',
-    time: '3분 전',
-    image: require('../../img/homescreenhero1.png'),
+    title: '살려주세요 살려주세요 빨리 와주세요',
+    description: '죽어가는 눈송이 / 호스트 등급 5등급',
+    time: '1분 전',
+    image: require('../../img/homescreenhost1.png'),
+    status: '요청 중',
   },
   {
     id: '2',
-    title: '살려주세요 살려주세요 빨리 와주세요',
-    description: '죽어가는 눈송이 / 호스트 등급 5등급',
+    title: '무엇이든지 해결해주는 해결사 눈송이 입니다',
+    description: '해결사 눈송이 / 히어로 등급 2등급',
     time: '5분 전',
-    image: require('../../img/homescreenhost1.png'),
-    status: '요청 중',
+    image: require('../../img/homescreenhero1.png'),
   },
   {
     id: '3',

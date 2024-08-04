@@ -67,7 +67,7 @@ const BottomTabNavigator = () => {
           tabBarStyle: {display: 'none'},
         }}
       />
-      <Tab.Screen name="Alarm" component={Alarm_Hero} />
+      <Tab.Screen name="Alarm" component={Alarm_Host} />
       <Tab.Screen name="MY" component={MY_Host} />
     </Tab.Navigator>
   );
