@@ -1,79 +1,92 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# 👊 당신의 자취방은 이제 안전하다! </br> 벌레 퇴치를 위한 영웅 매칭을 도와주는 '우리집 히어로즈' 👊
+![image](https://github.com/user-attachments/assets/f637768f-0306-48c2-b4dd-6a099cd42359)
 
-# Getting Started
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+> 2024 All-In 코딩 공모전 우수상 수상작 </br>
+> 기간 : 2024.06 ~ 2024.07 </br>
 
-## Step 1: Start the Metro Server
+</br>
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+## 🔥 **𝗣𝗿𝗼𝗷𝗲𝗰𝘁 𝗢𝘃𝗲𝗿𝘃𝗶𝗲𝘄**
 
-To start Metro, run the following command from the _root_ of your React Native project:
+### 𝗕𝗮𝗰𝗸𝗴𝗿𝗼𝘂𝗻𝗱
+![image](https://github.com/user-attachments/assets/e6da95a9-ebc9-4963-b471-707a1cc018b7)
+![image](https://github.com/user-attachments/assets/0e01bec9-9940-49ac-a94d-ce0a12cacef8)
 
-```bash
-# using npm
-npm start
+- 자취방에서 벌레를 발견해도, 벌레를 잡는 것을 무서워하는 학우의 사례에서 아이디어를 얻음 
+- 당근마켓이나 에브리타임 게시판 등에 게시글을 작성함으로써 벌레 잡는 것을 부탁할 수 있음
+- 그러나 대학생에게는 부담스러운 가격의 사례금 제시, 개인정보와 주소 공개의 위험성 등의 pain point가 있음을 느낌
 
-# OR using Yarn
-yarn start
-```
 
-## Step 2: Start your Application
+### 𝗚𝗼𝗮𝗹𝘀
+![image](https://github.com/user-attachments/assets/ab254749-fe59-43b6-a30f-4ddd15ecf1b1)
+![image](https://github.com/user-attachments/assets/417cf57a-457a-4c85-ab3d-63a8fded0f1d)
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+- 자취를 하면서 벌레 잡는 것에 어려움을 겪는 학생들이 신원이 보장된 학우에게 안전하게 벌레 퇴치를 요청함 
+- 요청을 수락하여 벌레를 퇴치해주는 학생들은 적당한 보상과 평판을 쌓을 수 있음
+- 벌레 퇴치를 요청하는 학생(호스트)와 벌레 퇴치 요청을 수락하는 학생(히어로)의 매칭 기능
+- 호스트의 벌레 퇴치 요청과 히어로의 요청 수락 알림 기능
 
-### For Android
+### 𝗜𝗻𝘁𝗿𝗼𝗱𝘂𝗰𝘁𝗶𝗼𝗻
 
-```bash
-# using npm
-npm run android
+- 우리집 히어로즈(My House Heroes): 벌레로부터 우리집을 지켜주는 히어로 라는 뜻의 서비스명
+  
+  ![image](https://github.com/user-attachments/assets/aa1c1281-7401-48d3-a060-85e34094ce50)
 
-# OR using Yarn
-yarn android
-```
+- 호스트가 벌레 퇴치를 요청하면 히어로가 퇴치 요청을 수락하는 서비스 
 
-### For iOS
+</br>
 
-```bash
-# using npm
-npm run ios
+## 💡 **𝗠𝗮𝗶𝗻 𝗣𝗮𝗴𝗲**
 
-# OR using Yarn
-yarn ios
-```
+| **회원가입 및 로그인 / Home**                                                   | **호스트의 요청 작성**                          | 
+|--------------------------------------------------------------------------------|----------------------------------------------------------------------------|
+| ![image](https://github.com/user-attachments/assets/c57483bc-1c86-4de0-988e-cefea5034dad) | ![image](https://github.com/user-attachments/assets/aae0fb90-ac9c-4cfb-bc10-edb1a7e153a4) | 
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+| **호스트의 매칭 요청 및 수락**                                                   | **히어로의 매칭 요청 및 수락**                                                              | 
+|--------------------------------------------------------------------------------|----------------------------------------------------------------------------|
+| ![image](https://github.com/user-attachments/assets/7a45d066-b718-41bd-b161-3540b5906ba7) | ![image](https://github.com/user-attachments/assets/e429d87e-85c8-4bb2-a9ac-56cab5fba5d4) |
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+</br>
 
-## Step 3: Modifying your App
+## 🏆 **𝗔𝘄𝗮𝗿𝗱𝘀**
 
-Now that you have successfully run the app, let's modify it.
+| **항목**       | **내용**                                                                 |
+|----------------|-------------------------------------------------------------------------|
+| **대회 이름**   | [2024 All-In 코딩 공모전](https://spartacodingclub.kr/site/all-in-challenge)       |
+| **주최**       | 스파르타코딩클럽, 크래프톤 정글                                                      |
+| **수상 내역**   | 우수상                                               |
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+</br>
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+## 🔧 **𝗧𝗲𝗰𝗵 𝗦𝘁𝗮𝗰𝗸**
 
-## Congratulations! :tada:
+| **분야**       | **사용 기술**                                 | 
+|----------------|---------------------------------------------|   
+| **[Frontend](https://github.com/team-MyHouseHeroes/myhouseheroes_frontend)**   | React Native, TypeScript                         |
+| **[Backend](https://github.com/team-MyHouseHeroes/myhouseheroes_backend)**    | Spring Boot, Java   
+| **Database**   | AWS S3, MySQL(RDS)                       |
 
-You've successfully run and modified your React Native App. :partying_face:
 
-### Now what?
+</br>
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+##  📊 **𝗣𝗿𝗼𝗷𝗲𝗰𝘁 𝗗𝗶𝗮𝗴𝗿𝗮𝗺𝘀**
 
-# Troubleshooting
+### 𝗦𝗲𝗿𝘃𝗶𝗰𝗲 𝗔𝗿𝗰𝗵𝗶𝘁𝗲𝗰𝘁𝘂𝗿𝗲
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+![image](https://github.com/user-attachments/assets/8943b5c9-f328-45ef-87b0-e834a32cf6cf)
 
-# Learn More
 
-To learn more about React Native, take a look at the following resources:
+</br>
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+## 👥 **𝗠𝗲𝗺𝗯𝗲𝗿𝘀 𝗮𝗻𝗱 𝗥𝗼𝗹𝗲𝘀**
+
+| **이름**            | **역할**              |
+|---------------------|-----------------------|
+| [**한지수**](https://github.com/isuHan)     | PM, Backend |
+| [**배정연**](https://github.com/bluishflame)  | PM, Frontend  |
+
+</br>
+
+
+## 🔗 𝗥𝗲𝘀𝗼𝘂𝗿𝗰𝗲𝘀
